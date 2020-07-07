@@ -9,6 +9,6 @@ matrix:
         - CI=false npm run build
     - language: java
       jdk: oraclejdk11
-      before_script: cd ../backend
+      before_script: cd backend
       script:
         - ./mvnw clean install
