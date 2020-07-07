@@ -1,0 +1,16 @@
+matrix:
+  include:
+    - language: node_js
+      node_js:
+        - "8.12.0"
+      before_script: cd frontend
+      script:
+        - npm install
+        - npm run build
+        - npm start
+    - language: java
+      jdk: oraclejdk8
+      before_script: cd ../backend
+      script:
+        - ./mvnw clean install
+        - ./mvnw spring-boot:run
