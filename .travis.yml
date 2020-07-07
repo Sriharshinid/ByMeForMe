@@ -1,0 +1,14 @@
+matrix:
+  include:
+    - language: node_js
+      node_js:
+        - "8.12.0"
+      before_script: cd frontend
+      script:
+        - npm install
+        - CI=false npm run build
+    - language: java
+      jdk: oraclejdk11
+      before_script: cd backend
+      script:
+        - ./mvnw clean install
