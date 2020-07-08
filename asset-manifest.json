@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ByMeForMe/static/css/main.5f361e03.chunk.css",
+    "main.js": "/ByMeForMe/static/js/main.43994835.chunk.js",
+    "main.js.map": "/ByMeForMe/static/js/main.43994835.chunk.js.map",
+    "runtime-main.js": "/ByMeForMe/static/js/runtime-main.db4d6475.js",
+    "runtime-main.js.map": "/ByMeForMe/static/js/runtime-main.db4d6475.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/ByMeForMe/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.5238a2d2.chunk.js": "/ByMeForMe/static/js/2.5238a2d2.chunk.js",
+    "static/js/2.5238a2d2.chunk.js.map": "/ByMeForMe/static/js/2.5238a2d2.chunk.js.map",
+    "index.html": "/ByMeForMe/index.html",
+    "precache-manifest.df67f131b7e1503f334371cbd205b14a.js": "/ByMeForMe/precache-manifest.df67f131b7e1503f334371cbd205b14a.js",
+    "service-worker.js": "/ByMeForMe/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/ByMeForMe/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.5f361e03.chunk.css.map": "/ByMeForMe/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.5238a2d2.chunk.js.LICENSE.txt": "/ByMeForMe/static/js/2.5238a2d2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.db4d6475.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.5238a2d2.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.43994835.chunk.js"
+  ]
+}
