@@ -17,23 +17,23 @@ class Navigation extends React.Component {
     const show = (this.state.menu) ? "show" : "" ;
     return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">ByMeForMe</a>
+        <a className="navbar-brand" href="/ByMeForMe">ByMeForMe</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onClick={this.toggleMenu}>
             <span className="navbar-toggler-icon"></span>
         </button>
         <div className={"collapse navbar-collapse " + show} id="navbarNav">
             <ul className="navbar-nav mr-auto">
-                <li className={window.location.pathname==="/" ? 'nav-item active' : 'nav-item'}>
-                    <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
+                <li className={window.location.pathname==="/ByMeForMe" ? 'nav-item active' : 'nav-item'}>
+                    <a className="nav-link" href="/ByMeForMe">Home <span className="sr-only">(current)</span></a>
                 </li>
-                <li className={window.location.pathname==="/doodles" ? 'nav-item active' : 'nav-item'}>
-                    <a className="nav-link" href="/doodles">Doodles</a>
+                <li className={window.location.pathname==="/ByMeForMe/doodles" ? 'nav-item active' : 'nav-item'}>
+                    <a className="nav-link" href="/ByMeForMe/doodles">Doodles</a>
                 </li>
-                <li className={window.location.pathname==="/food" ? 'nav-item active' : 'nav-item'}>
-                    <a className="nav-link" href="/food">Food</a>
+                <li className={window.location.pathname==="/ByMeForMe/food" ? 'nav-item active' : 'nav-item'}>
+                    <a className="nav-link" href="/ByMeForMe/food">Food</a>
                 </li>
-                <li className={window.location.pathname==="/current" ? 'nav-item active' : 'nav-item'}>
-                    <a className="nav-link" href="/current">Current Events</a>
+                <li className={window.location.pathname==="/ByMeForMe/current" ? 'nav-item active' : 'nav-item'}>
+                    <a className="nav-link" href="/ByMeForMe/current">Current Events</a>
                 </li>
             </ul>
         </div>
