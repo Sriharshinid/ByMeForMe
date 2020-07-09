@@ -30,6 +30,6 @@ public class DatabaseLoader implements CommandLineRunner{
 
     @Override
 	public void run(String... strings) throws Exception {
-        loadImages("static/food");
+        loadImages("static/api/food");
 	}
 }
