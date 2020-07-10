@@ -13,12 +13,15 @@ import java.io.IOException;
 @Component
 public class DatabaseLoader implements CommandLineRunner{
     private final MyImageRepository repository;
+    
+    @Value("classpath:static/api/food/*")
+    private Resource[] resources;
 
     @Autowired
     public DatabaseLoader(MyImageRepository repository) {
         this.repository = repository;
     }
-
+/*
     public void loadImages(String folderName) throws IOException{
         ClassLoader classLoader = ClassLoader.getSystemClassLoader();
         File file = new File(classLoader.getResource(folderName).getFile());
@@ -27,10 +30,18 @@ public class DatabaseLoader implements CommandLineRunner{
             this.repository.save(new MyImage(name, "food/" + name, name.substring(0, name.indexOf("."))));
         }
     }
+*/
+
+    public void loadImages(String folderName) throws IOException{
+    	for (final Resource res : resources) {
+		String name = res.getFilename();
+		this.repository.save(new MyImage(name, "food/" + name, name.substring(0, name.indexOf("."))));
+	}
+    }
 
     @Override
 	public void run(String... strings) throws Exception {
-        loadImages("BOOT-INF/classes/static/api/food");
+        loadImages("static/api/food");
 	//this.repository.save(new MyImage("TEST", "food/TEST", "THIS IS A TEST"));
 	}
 }
