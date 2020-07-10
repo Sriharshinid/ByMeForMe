@@ -57,32 +57,16 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-			<!-- Deploy the web site -->
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <version>0.12</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>site</goal>
-                        </goals>
-                        <phase>site</phase>
-                        <configuration>
-                            <!-- Make sure you have authentication for this server on .m2/settings.xml -->
-                            <server>github</server>
-                            <message>Building site for my project</message>
-                            <merge>true</merge>
-                        </configuration>
-                    </execution>
-                </executions>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.0.0</version>
             </plugin>
 		</plugins>
 	</build>
-
-	<scm>
-        <url>https://github.com/sriharshinid/ByMeForMe</url>
-        <connection>scm:git:git@github.com:sriharshinid/ByMeForMe.git</connection>
-        <developerConnection>scm:git:git@github.com:sriharshinid/ByMeForMe.git</developerConnection>
-    </scm>
-
 </project>
