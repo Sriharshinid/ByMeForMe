@@ -30,7 +30,7 @@ public class DatabaseLoader implements CommandLineRunner{
 
     @Override
 	public void run(String... strings) throws Exception {
-        //loadImages("static/api/food");
-	this.repository.save(new MyImage("TEST", "food/TEST", "THIS IS A TEST"));
+        //loadImages("api/food");
+	//this.repository.save(new MyImage("TEST", "food/TEST", "THIS IS A TEST"));
 	}
 }
