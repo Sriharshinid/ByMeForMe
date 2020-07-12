@@ -16,10 +16,11 @@ import java.io.IOException;
 
 @Component
 public class DatabaseLoader implements CommandLineRunner{
-    private final MyImageRepository repository;
 
     @Value("classpath:static/api/food/*")
     private Resource[] resources;
+
+    private final MyImageRepository repository;
 
     @Autowired
     public DatabaseLoader(MyImageRepository repository) {
@@ -48,7 +49,7 @@ public class DatabaseLoader implements CommandLineRunner{
         ClassLoader cl = this.getClass().getClassLoader();
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver(cl);
         try {
-            Resource resources[] = resolver.getResources("classpath:"+ folderName +"/**");
+            Resource resources[] = resolver.getResources("classpath:"+ folderName +"/*.*");
             for (final Resource res : resources) {
                 String name = res.getFilename();
                 this.repository.save(new MyImage(name, "food/" + name, name.substring(0, name.indexOf("."))));
