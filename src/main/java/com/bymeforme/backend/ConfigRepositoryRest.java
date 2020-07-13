@@ -10,6 +10,6 @@ public class ConfigRepositoryRest implements RepositoryRestConfigurer {
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
         config.getCorsRegistry()
                 .addMapping("/**")
-                .allowedOrigins("http://localhost:3000", "https://sriharshinid.github.io/ByMeForMe", "http://sriharshinid.github.io/ByMeForMe");
+                .allowedOrigins("http://localhost:3000", "https://sriharshinid.github.io");
     }
 }
