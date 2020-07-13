@@ -25,6 +25,9 @@ const IMAGES = [{
 }]
 
 class ImageGrid extends React.Component {
+  constructor(props) {
+		super(props);
+  }
   render() {
     return (
         <div style={{
@@ -33,7 +36,7 @@ class ImageGrid extends React.Component {
           minHeight: "1px",
           width: "90%",
           overflow: "auto"}}>
-            <Gallery images={IMAGES} enableImageSelection={false} />
+            <Gallery images={this.props.images} enableImageSelection={false} />
         </div>
     );
   }
