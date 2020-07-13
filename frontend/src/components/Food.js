@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageGrid from './ImageGrid';
 
-const serverDomain = 'http://localhost:8080/api/'
+const serverDomain = 'https://by-me-for-me-backend.herokuapp.com/api/'
 
 class Food extends React.Component {
 
