@@ -1,11 +1,20 @@
 import React from 'react';
+import Spongebob from '../images/spongebob.png'
 
 class Home extends React.Component {
   render() {
     return (
         <div>
-            <h1>hElLo wOrlD 👽</h1>
+            <h1>hElLo wOrlD</h1>
             <p>Welcome to a site of random things made by me.</p>
+            <div style={{
+                display: "block",
+                margin: "auto",
+                minHeight: "1px",
+                width: "20%",
+                overflow: "auto"}}>
+              <img src={Spongebob} style={{height: "100%", width: "100%", objectFit: "contain"}}></img>
+            </div> 
         </div>
     );
   }
