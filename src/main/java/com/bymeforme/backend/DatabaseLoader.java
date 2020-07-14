@@ -26,33 +26,15 @@ public class DatabaseLoader implements CommandLineRunner{
     public DatabaseLoader(MyImageRepository repository) {
         this.repository = repository;
     }
-/*
-    public void loadImages(String folderName) throws IOException{
-        ClassLoader classLoader = ClassLoader.getSystemClassLoader();
-        File file = new File(classLoader.getResource(folderName).getFile());
-        String[] fileList = file.list();
-        for(String name:fileList){
-            this.repository.save(new MyImage(name, "food/" + name, name.substring(0, name.indexOf("."))));
-        }
-    }
 
-
-    public void loadImages(String folderName) throws IOException{
-    	for (final Resource res : resources) {
-            String name = res.getFilename();
-            this.repository.save(new MyImage(name, "food/" + name, name.substring(0, name.indexOf("."))));
-	    }
-    }
-*/
-
-    public void loadImages(String folderName) throws IOException{
+    public void loadImages(String folderName, String subFolder) throws IOException{
         ClassLoader cl = this.getClass().getClassLoader();
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver(cl);
         try {
             Resource resources[] = resolver.getResources("classpath:"+ folderName +"/*.*");
             for (final Resource res : resources) {
                 String name = res.getFilename();
-                this.repository.save(new MyImage(name, "food/" + name, name.substring(0, name.indexOf("."))));
+                this.repository.save(new MyImage(name, subFolder + name, name.substring(0, name.indexOf("."))));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -60,8 +42,8 @@ public class DatabaseLoader implements CommandLineRunner{
     }
     @Override
 	public void run(String... strings) throws Exception {
-        loadImages("static/api/food");
-	    //this.repository.save(new MyImage("TEST", "food/TEST", "THIS IS A TEST"));
+        loadImages("static/api/food", "food/");
+        loadImages("static/api/doodle", "doodle/");
     }
     
 }
